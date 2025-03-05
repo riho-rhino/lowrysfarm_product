@@ -1,0 +1,128 @@
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
+
+
+
+.mv{
+    position: relative;
+    background: c.$bg;
+}
+
+.top_wrap{
+    width: calc(307 / c.$spw) * 100%;
+    display: flex;
+    align-items: flex-start;
+    vertical-align: middle;
+    margin: 0 0 0 calc(24 / c.$spw) * 100%;
+    padding-top: calc(24.5 / c.$spw) * 100%;
+    justify-content: space-between;
+    .ttl_line{
+        line-height: 0;
+        height: fit-content;
+        width: 100%;
+        display: block;
+    }
+}
+
+.ttl_wrap{
+    width: calc(216.67 / 307) * 100%;
+    .ttl_above{
+        padding-top: calc(8 / 216.67) * 100%;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: center;
+        width: 100%;
+        gap: 6px;
+        .ttl_1{
+            width: calc(92/ 216.67) * 100%;
+            line-height: 0;
+        }
+        .ttl_2{
+            width: calc(92/ 216.67) * 100%;
+            line-height: 0;
+        }
+    }   
+    .ttl_3{
+        width: calc(192/ 216.67) * 100%;
+        line-height: 0;
+        margin: calc(8 / 216.67) * 100% auto ;
+    }
+}
+
+.seven_select{
+    position: relative;
+    width: calc(81 / 307) * 100%;
+    .seven{
+        line-height: 0;
+        width: 100%;
+    }
+    .select{
+        width: calc(46.47 / 81) * 100%;
+        line-height: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: calc(-17 / 81) * 100%;
+    }
+
+}
+
+.subttl{
+    margin:calc(12 / c.$spw) * 100% auto 0;
+    text-align: center;
+    color: c.$main;;
+    line-height: 1;
+    position: relative;
+    z-index: 10;
+
+}
+
+.mv_ph{
+    margin-top: calc(7 / c.$spw) * 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.mv_circle{
+   width: calc(459 / c.$spw) * 100%;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   margin-top: calc(157 / c.$spw) * 100%; 
+   z-index: 1;
+}
+
+.mv_txt{
+    position: absolute;
+    z-index: 30;
+    width: calc(185 / c.$spw) * 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 calc(31 / c.$spw) * 100% calc(23 / c.$spw) * 100%;
+    .mvtxt_1{
+        width: calc(148.58 / 185) * 100%;
+        line-height: 0;
+    }
+    .mvtxt_2{
+        margin-top: calc(3.8 / 185) * 100%;
+        line-height: 0;
+    }
+}
+
+.lead{
+    text-align: center;
+    padding: calc(19 / c.$spw) * 100% 0 calc(70 / c.$spw) * 100%;
+    background: c.$bg;
+    color: c.$main;
+    line-height: calc(26 / 14);
+    font-size: calc(14 / c.$spw * 100vw);
+    position: relative;
+    z-index: 5;
+    @include pc{
+        font-size: min(calc(14 / c.$pcw * 100vw),14px);
+    }
+}
+

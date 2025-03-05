@@ -260,6 +260,7 @@
   
   img {
     border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+    width: 100%;
   }
   
   /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
@@ -292,3 +293,4 @@ ol, ul, li {
 a {
   text-decoration: none;
 }
+

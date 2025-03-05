@@ -1,5 +1,9 @@
 @use './_reset';
 @use './_mixin' as m;
-
-// modeuls
-@use './_modules/_test';
+@use './_common';
+@use './_top';
+@use './_main';
+@use './_parts';
+@use './_footer';
+@use './_anchor';
+@use './_linetxt';

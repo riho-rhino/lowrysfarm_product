@@ -1,0 +1,42 @@
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
+
+.linetxt{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 500;
+    .line_bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+    }
+    span{
+        line-height: 1;
+        position: relative;
+        z-index: 10;
+        white-space: nowrap;
+        color: #fff;
+        font-size: calc(17.7 / c.$spw * 100vw);
+        padding: 15px 0 11px;
+        flex-shrink: 0;
+        animation: linear loop-text 8s infinite;
+        margin-right: 15px;
+    }
+}
+
+@keyframes loop-text {
+    0% {
+        transform: translateX(0%);
+    }
+    
+    100% {
+        transform: translateX(-100%);
+    }
+}
+

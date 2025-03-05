@@ -1,3 +1,33 @@
-<img src="<%= rootURL %>" alt="">
+<!-- <img src="<%= rootURL %>" alt=""> -->
 
-<script src="<%= rootURL %>assets/js/index.js"></script>
+<div class="wrapper">
+    <div class="pc-left pc-side pc">
+        <%- include('./_left.ejs') %>
+    </div>
+    <div class="contents">
+        <div class="contents-inner">
+            <%- include('./_top.ejs') %>
+            <div class="anchor sp">
+                <%- include('./_anchor.ejs') %>
+            </div>
+            <%- include('./_linetxt.ejs') %>
+            <main>
+                <%- include('./_style1.ejs') %>
+                <%- include('./_style2.ejs') %>
+                <%- include('./_style3.ejs') %>
+                <%- include('./_style4.ejs') %>
+                <%- include('./_style5.ejs') %>
+                <%- include('./_style6.ejs') %>
+                <%- include('./_style7.ejs') %>
+            </main>
+            <%- include('./_foot.ejs') %>
+        </div>
+    </div>
+    <div class="pc-right pc-side pc">
+        <%- include('./_right.ejs') %>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="<%= rootURL %>/assets/js/index.js"></script>

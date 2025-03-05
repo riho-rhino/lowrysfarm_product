@@ -1,0 +1,25 @@
+
+.wrapper{
+    @include pc{
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.contents{
+    @include pc{
+        width: calc(425 / c.$spw) * 100%;
+    }
+
+}
+
+.pc-left{
+    position: relative;
+    height: 100%;
+    width: calc(613 / c.$spw) * 100%;
+}
+.pc-right{
+    position: relative;
+    height: 100%;
+    width: calc(384 / c.$spw) * 100%;
+}

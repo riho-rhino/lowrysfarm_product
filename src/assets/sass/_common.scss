@@ -1,0 +1,60 @@
+@use './_reset';
+@use './_mixin' as *;
+
+
+$spw : 375;
+$pcw : 1440;
+
+$bg:#F8F3EC;
+$main: #48E162;
+
+.contents-inner{
+    overflow: hidden;
+}
+
+
+.pc{
+    display: none!important;
+}
+.sp{
+    display: block!important;
+}
+
+
+
+@include pc{
+    .pc{
+        display: block!important;
+    }
+    .sp{
+        display: none!important;
+    } 
+}
+
+.ja_m{
+    font-family: "noto-sans-cjk-jp", sans-serif;
+    font-weight: 500;
+    font-style: normal;    
+}
+
+.ja_b{
+    font-family: "noto-sans-cjk-jp", sans-serif;
+    font-weight: 700;
+    font-style: normal;    
+}
+
+.en_r{
+    font-family: "gelica", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+.en_m{
+    font-family: "gelica", sans-serif;
+    font-weight: 500;
+    font-style: normal;    
+}
+.en_b{
+    font-family: "gelica", sans-serif;
+    font-weight: 600;
+    font-style: normal;    
+}
