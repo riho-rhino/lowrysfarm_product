@@ -103,8 +103,8 @@
 
         .item_buy{
             width: calc(104 / c.$spw) * 100%;
+            max-width: 104px;
             margin: calc(14 / c.$spw) * 100% auto 0;
-            
             a{
                 border-radius: 3px;
                 display: block;
@@ -180,20 +180,17 @@
         margin-right: calc(8 / 324) * 100%;
     }
 
-    .style_pop{
+    
+    .pop_wrap{
         position: absolute;
         top: 0;
-        background-color: c.$main;
-        writing-mode: vertical-rl;
-        white-space: nowrap;
-        font-size: calc(14 /c.$spw * 100vw);
-        line-height: 1;
-        font-feature-settings: normal;
-        text-orientation: upright;
-        color: #fff;
-        padding: 5px 2px;
+        display: flex;
+        vertical-align: middle;
+        align-items: flex-start;
+        width: calc(44 / 324) * 100%;
+        gap: 4px;
+        
     }
-
     .style_line{
         width: calc(285.44 / 324) * 100%;
         margin: 0 auto;
@@ -217,6 +214,7 @@
     
         .style_buy{
             width: calc(96 / 285.44) * 100%;
+            max-width: 96px;
             a{
                 border-radius: 3px;
                 display: block;
@@ -227,6 +225,17 @@
                 font-size: calc(13 /c.$spw * 100vw);
                 padding: 7px;
             }
+        }
+        @include pc{
+            .style_name-price{
+                font-size: min(calc(12 / c.$pcw * 100vw),12px);
+            }
+            .style_buy{
+                a{
+                    font-size: min(calc(13 / c.$pcw * 100vw),13px);
+                }
+            }
+            
         }
     }
 

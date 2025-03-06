@@ -2,13 +2,19 @@
 @use './_mixin' as *;
 @use './_common' as c;
 
+
 .anchor{
     margin-top: -3%;
     padding-bottom: calc(43 / c.$spw) * 100%;
+    @include pc{
+        margin-top: 0;
+        padding-bottom: 0;
+    }
 }
 
+
+
 .acnhor_ttl {
-    
     position: relative;
     z-index: 10;
     color: c.$main;
@@ -21,6 +27,8 @@
     
     @include pc{
         font-size: min(calc(20 / c.$pcw) * 100vw,20px);
+        background:none;
+        padding-top: 0%;
     }
 }
 
@@ -57,6 +65,49 @@
     }
 }
 
+.arrow_1{
+    animation: arrow_1 2s linear infinite;
+}
+.arrow_2{
+    animation: arrow_2 2s linear infinite;
+}
+
+@keyframes arrow_1 {
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90%,100%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+@keyframes arrow_2 {
+    0%,20%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    35%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90%,100%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
 .anchor_list{
     display: flex;
     vertical-align: middle;
@@ -75,6 +126,9 @@
             position: relative;
             .anchor_circle{
                 width: 100%;
+                @include pc{
+                    filter: brightness(1) invert(0);
+                }
             }
             .anchor_item{
                 position: absolute;
@@ -95,24 +149,14 @@
                 color: #fff;
                 background: c.$main;border-radius: 50%;
                 display: table;
+                
 
                 .anchor_num{
                     line-height: 1;
                     vertical-align: middle;
                     display: table-cell;
+                    font-size: calc(12 / c.$spw * 100vw);
                 }
-            }
-            .anchor_slash{
-                position: absolute;
-                content: "";
-                top: 0;
-                left: 0;
-                width: 7px;
-                height: 1.5px;
-                background: c.$main;
-                transform: rotate(45deg);
-                margin: calc(32 / 148.5) * 100% 0 0 calc(33 / 148.5) * 100%;
-
             }
         }
         .anchor_name{
@@ -126,8 +170,46 @@
             
         }
     }
+    @include pc{
+        gap: unset;
+        justify-content: space-between;
+        li{
+            width: calc(111.62 / 251.61) * 100%;
+            .anchor_inner{
+                .anchor_numbg{
+                    width: 28px;
+                    height: 28px;
+                    .anchor_num{
+                        font-size: min(calc(12 / c.$pcw * 100vw),12px);
+                    }
+                }
+            }
+            .anchor_name{
+                font-size: min(calc(9 / c.$pcw) * 100vw,9px);
+            }
+        }
+    }
+  
 }
-
+.anchor_slash{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 1.5px;
+    background: c.$main;
+    transform: rotate(45deg);
+    margin: 23% 0 0 21%;
+    @include pc{
+        width: calc(5 / 111.62) * 100%;
+        height: 1px;
+        margin: 25% 0 0 22%;
+    }
+    @include pcw{
+        margin: 21% 0 0 19%;
+    }
+}
 
 .seven_link{
     width: calc(142.77 / c.$spw) * 100%;
@@ -137,7 +219,7 @@
     border: solid 1px c.$main;
     border-radius: 50%;
     
-    &::after{
+    a{
         width: calc(127 / 148.5) * 100%;
         content: "";
         position: absolute;
@@ -149,15 +231,30 @@
         border: solid 1px c.$main;
         border-radius: 50%;
         display: block;
-    }
-    a{
+        transition: all .3s ease;
         .check{    
-            width: calc(83 / 148.5) * 100%;
+            width: calc(83 / 127) * 100%;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
             line-height: 0;
+        }
+    }
+    &:hover{
+        a{
+            width: 100%;
+            padding-top: 100%;
+        }
+    }
+    @include pc{
+        width: calc(107.31 / 251) * 100%;
+        padding-top: calc(107.31 / 251) * 100%;
+        width: calc(95.46 / 107.31) * 100%;
+        a{
+            .check{
+                width: calc(62 / 107.31) * 100%;   
+            }
         }
     }
 }
@@ -166,41 +263,70 @@
     .anchor_item{
         margin-top: calc(17 / 148.5) * 100%;
         width: calc(117 / 148.5) * 100%;
+        @include pc{
+            margin-top: calc(13 / 111.62) * 100%;
+            width: calc(87.94 / 111.62) * 100%;   
+        }
     }
 }
 .anchor_2{
     .anchor_item{
         margin-top: calc(9.2 / 148.5) * 100%;
         width: calc(69 / 148.5) * 100%;
+        @include pc{
+            margin-top: calc(7 / 111.62) * 100%;
+            width: calc(51.86 / 111.62) * 100%;   
+        }
     }
 }
 .anchor_3{
     .anchor_item{
         margin-top: calc(15 / 148.5) * 100%;
         width: calc(91 / 148.5) * 100%;
+        @include pc{
+            margin-top: calc(11.4 / 111.62) * 100%;
+            width: calc(68.4 / 111.62) * 100%;   
+        }
     }
 }
 .anchor_4{
     .anchor_item{
-        margin-top: calc(28 / 148.5) * 100%;
+        margin: calc(28 / 148.5) * 100% auto 0 5%;
         width: calc(135 / 148.5) * 100%;
+        @include pc{
+            margin: calc(21.4 / 111.62) * 100% auto 0 calc(2 / 111.62) * 100%;
+            width: calc(101.82 / 111.62) * 100%;   
+        }
     }
 }
 .anchor_5{
     .anchor_item{
         margin-top: calc(27.5 / 148.5) * 100%;
         width: calc(117 / 148.5) * 100%;
+        @include pc{
+            margin-top: calc(20.6 / 111.62) * 100%;
+            width: calc(87.94 / 111.62) * 100%;   
+        }
     }
 }
 .anchor_6{
     .anchor_item{
         margin-top: calc(25.5 / 148.5) * 100%;
+        margin-left: 3%;
         width: calc(118 / 148.5) * 100%;
+        @include pc{
+            margin: calc(19.6 / 111.62) * 100% auto 0 calc(2 / 111.62) * 100%;
+            width: calc(88.7 / 111.62) * 100%;   
+        }
     }
 }
 .anchor_7{
     .anchor_item{
         margin-top: calc(10.5 / 148.5) * 100%;
         width: calc(68 / 148.5) * 100%;
+        @include pc{
+            margin-top: calc(7.8 / 111.62) * 100%;
+            width: calc(51.11 / 111.62) * 100%;   
+        }
     }
 }

@@ -1,32 +1,61 @@
+
 @use './_reset';
 @use './_mixin' as *;
 @use './_common' as c;
 
+
+
+.lead{
+    text-align: center;
+    padding: calc(19 / c.$spw) * 100% 0 calc(70 / c.$spw) * 100%;
+    background: c.$bg;
+    color: c.$main;
+    line-height: calc(26 / 14);
+    font-size: calc(14 / c.$spw * 100vw);
+    position: relative;
+    z-index: 5;
+    @include pc{
+        font-size: min(calc(14 / c.$pcw * 100vw),14px);
+        padding: calc(37 / c.$pcm) * 100% 0 calc(48 / c.$pcm) * 100%;
+    }
+}
+
+
 .linetxt{
-    display: flex;
-    flex-wrap: nowrap;
     overflow: hidden;
     position: relative;
     width: 100%;
     z-index: 500;
+    @include pc{
+        margin-top: -3%;
+    }
     .line_bg{
-        position: absolute;
-        top: 0;
-        left: 0;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
         width: 100%;
         line-height: 0;
     }
-    span{
-        line-height: 1;
-        position: relative;
-        z-index: 10;
-        white-space: nowrap;
-        color: #fff;
-        font-size: calc(17.7 / c.$spw * 100vw);
-        padding: 15px 0 11px;
-        flex-shrink: 0;
-        animation: linear loop-text 8s infinite;
-        margin-right: 15px;
+    .linetxt_wrap{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        span{
+            line-height: 1;
+            z-index: 10;
+            white-space: nowrap;
+            color: #fff;
+            font-size: calc(17.7 / c.$spw * 100vw);
+            flex-shrink: 0;
+            animation: linear loop-text 8s infinite;
+            margin-right: 15px;
+            @include pc{
+                font-size: min(calc(17.7 / c.$pcw * 100vw),17.7px);
+            }
+        }
     }
 }
 

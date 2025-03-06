@@ -104,6 +104,9 @@
     vertical-align: middle;
     justify-content: space-between;
     margin: 0 auto ;
+    @include pc{
+        display: none;
+    }
     .sns_icon{
         width: calc(42 / 151) * 100%;
         line-height: 0;

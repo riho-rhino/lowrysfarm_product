@@ -1,0 +1,53 @@
+
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
+
+
+.pc-left{
+    position: relative;
+    height: 100%;
+}
+
+.left-inner{
+    position: fixed;
+    width: calc(450.46 / c.$pcw) * 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: calc(90 / c.$pcw) * 100%;
+    
+}
+
+
+
+
+
+.left_logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100.55 / c.$pcw) * 100%;
+    margin: calc(22 / c.$pcw) * 100% 0 0 calc(24 / c.$pcw) * 100%;
+}
+
+.left_sns{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100.55 / c.$pcw) * 100%;
+    margin: 0 0 calc(22 / c.$pcw) * 100% calc(24 / c.$pcw) * 100%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+    .pc_x{
+        width: calc( 23.25/ 100.55) * 100%;
+    }
+    .pc_insta{
+        width: calc( 23.21/ 100.55) * 100%;
+    }
+    .pc_tiktok{
+        width: calc( 20.34/ 100.55) * 100%;
+    }
+}

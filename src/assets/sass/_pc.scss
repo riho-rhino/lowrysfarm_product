@@ -1,25 +1,36 @@
+@use './_reset';
+@use './_mixin' as *;
+@use './_common' as c;
 
 .wrapper{
     @include pc{
-        display: flex;
-        align-items: flex-start;
+        display: grid;
+        align-items: start;
+        grid-template-columns: calc(613 / c.$pcw) * 100% calc(425 / c.$pcw) * 100% calc(384 / c.$pcw) * 100%;
     }
 }
 
 .contents{
     @include pc{
-        width: calc(425 / c.$spw) * 100%;
+        border-left: c.$main solid 1px;
+        border-right: c.$main solid 1px;
     }
 
 }
 
-.pc-left{
-    position: relative;
-    height: 100%;
-    width: calc(613 / c.$spw) * 100%;
-}
+
 .pc-right{
-    position: relative;
-    height: 100%;
-    width: calc(384 / c.$spw) * 100%;
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include pc{
+        display: flex;
+    }
+    .right_inner{
+        width: calc(251.61 / 384) * 100%;
+    }
 }
