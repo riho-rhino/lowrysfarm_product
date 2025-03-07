@@ -4,11 +4,11 @@
 
 
 .style_1{
+    z-index: 200;
     background: c.$bg;
     margin-top: -2%;
     .item_inner{
         background: #fff;
-
         .itemph{
             padding-top: calc(59 / c.$spw) * 100%;
         }
@@ -23,7 +23,7 @@
         }
     
         .pop_wrap{
-            flex-direction:row-reverse;
+            
             right: 0;
             margin-right: calc(31 / 324) * 100%;
             margin-top: calc(29 / 324) * 100%;
@@ -46,7 +46,7 @@
             margin-left: calc(50 / 324) * 100%;
         }
        
-        .style_pop1{
+        .style_pop2{
             margin-top: calc(72 / 44) * 100%;
         }
     }
@@ -54,8 +54,8 @@
 
 
 .style_2{
+    z-index: 190;
     background: #fff;
-    margin-top: -1%;
     .item_inner{
         background: c.$bg;
 
@@ -72,7 +72,7 @@
         }
     
         .pop_wrap{
-            flex-direction:row-reverse;
+            
             right: 0;
             margin-right: calc(34 / 324) * 100%;
             margin-top: calc(29 / 324) * 100%;
@@ -95,7 +95,7 @@
             margin-left: calc(29 / 324) * 100%;
         }
        
-        .style_pop1{
+        .style_pop2{
             margin-top: calc(72 / 44) * 100%;
         }
     }
@@ -104,8 +104,8 @@
 
 
 .style_3{
+    z-index: 180;
     background: c.$bg;
-    margin-top: -1%;
     .item_inner{
         background: #fff;
 
@@ -122,7 +122,7 @@
         }
     
         .pop_wrap{
-            flex-direction:row-reverse;
+            
             right: 0;
             margin-right: calc(28 / 324) * 100%;
             margin-top: calc(33 / 324) * 100%;
@@ -145,7 +145,7 @@
             margin-left: calc(29 / 324) * 100%;
         }
        
-        .style_pop1{
+        .style_pop2{
             margin-top: calc(72 / 44) * 100%;
         }
     }
@@ -154,7 +154,7 @@
 
 
 .style_4{
-    margin-top: -1%;
+    z-index: 170;
     background: #fff;
     .item_inner{
         background: c.$bg;
@@ -172,7 +172,7 @@
         }
     
         .pop_wrap{
-            flex-direction:row-reverse;
+            
             right: 0;
             margin-right: calc(30 / 324) * 100%;
             margin-top: calc(22 / 324) * 100%;
@@ -195,7 +195,7 @@
             margin-left: calc(34 / 324) * 100%;
         }
        
-        .style_pop1{
+        .style_pop2{
             margin-top: calc(35 / 44) * 100%;
         }
     }
@@ -203,8 +203,8 @@
 
 
 .style_5{
+    z-index: 160;
     background: c.$bg;
-    margin-top: -1%;
     .item_inner{
         background: #fff;
 
@@ -221,7 +221,7 @@
         }
     
         .pop_wrap{
-            flex-direction:row-reverse;
+            
             right: 0;
             margin-right: calc(30 / 324) * 100%;
             margin-top: calc(12 / 324) * 100%;
@@ -244,7 +244,7 @@
             margin-left: calc(32 / 324) * 100%;
         }
        
-        .style_pop1{
+        .style_pop2{
             margin-top: calc(35 / 44) * 100%;
         }
     }
@@ -253,8 +253,8 @@
 
 
 .style_6{
+    z-index: 140;
     background: #fff;
-    margin-top: -1%;
     .item_inner{
         background: c.$bg;
 
@@ -271,7 +271,7 @@
         }
     
         .pop_wrap{
-            flex-direction:row-reverse;
+            
             right: 0;
             margin-right: calc(26 / 324) * 100%;
             margin-top: calc(17 / 324) * 100%;
@@ -294,7 +294,7 @@
             margin-left: calc(25 / 324) * 100%;
         }
        
-        .style_pop1{
+        .style_pop2{
             margin-top: calc(35 / 44) * 100%;
         }
     }
@@ -302,8 +302,8 @@
 
 
 .style_7{
+    z-index: 130;
     background: c.$bg;
-    margin-top: -1%;
     .item_inner{
         background: #fff;
 
@@ -320,7 +320,7 @@
         }
     
         .pop_wrap{
-            flex-direction:row-reverse;
+            
             right: 0;
             margin-right: calc(26 / 324) * 100%;
             margin-top: calc(21 / 324) * 100%;
@@ -332,7 +332,7 @@
     }
 
     .style7-2{
-        margin-bottom: calc(83 / c.$spw) * 100%;
+        
         .styleph7-2{
             width: calc(250 / 324) * 100%;
             margin: calc(28 / 324) * 100% auto calc(30 / 324) * 100%;
@@ -344,7 +344,7 @@
             margin-left: calc(25 / 324) * 100%;
         }
        
-        .style_pop1{
+        .style_pop2{
             margin-top: calc(35 / 44) * 100%;
         }
     }

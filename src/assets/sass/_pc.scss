@@ -34,3 +34,41 @@
         width: calc(251.61 / 384) * 100%;
     }
 }
+
+
+.l-fix__scrollbar {
+    @include pc {
+        content: "";
+        position: absolute;
+        z-index: 999;
+        bottom: 0;
+        right: 0;
+        height: 56px;
+        width: 2px;
+        transition: ease opacity 0.2s;
+        background: c.$main;
+        opacity: 0;
+        
+        
+    }
+    @include pcw{
+        margin-right: calc(190 / c.$pcw) * 100%;
+    }
+    
+
+    .current {
+        @include pc {
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 7px;
+            height: 7px;
+            background-color: none;
+            border: solid 1px c.$main;
+            border-radius: 50%;
+        }
+    }
+}

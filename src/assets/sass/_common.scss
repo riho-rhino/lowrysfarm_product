@@ -9,6 +9,11 @@ $pcw : 1440;
 $bg:#F8F3EC;
 $main: #48E162;
 
+body{
+    &.noscroll{
+        overflow: hidden;
+    }
+}
 .contents-inner{
     overflow: hidden;
 }
@@ -58,4 +63,12 @@ $main: #48E162;
     font-family: "gelica", sans-serif;
     font-weight: 600;
     font-style: normal;    
+}
+
+.fadein{
+    opacity: 0;
+    transition:opacity .5s ease;
+    &.in{
+        opacity: 1;
+    }
 }

@@ -5,6 +5,8 @@
 
 .footer_line{
     line-height: 0;
+    padding-top: calc(83 / c.$spw) * 100%;
+    background: #fff;
 }
 
 .footer{

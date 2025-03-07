@@ -5,23 +5,35 @@
         <%- include('./_left.ejs') %>
     </div>
     <div class="contents">
+        <div class="l-fix__scrollbar pc js-scrollbar"><i class="current"></i></div>
         <div class="contents-inner">
             <header class="mv sp">
                 <%- include('./_top.ejs') %>
             </header>
-            <p class="lead ja_m sp">
-                マストバイな ”カワイイ” 大本命！<br>
-                マストバイな ”カワイイ” 大本命！マストバイな ”<br>
-                カワイイ” 大本命！マストバイな ”<br>
-                カワイイ” 大本命！<br>
-                マストバイな ”カワイイ” 大本命！マストバイな <br>
-                マストバイな マストバイな マストバイな 
+            <p class="lead ja_m sp fadein">
+                この春、ワードローブに加えたいのは<br>
+                着回しが効く“カワイイ” アイテム。<br>
+                今回は、そんな推せる7型を<br>
+                スタイルサンプルとともにご紹介。<br>
+                洗えるジャケットからリバーシブルのブラウスまで<br>
+                注目の新作をチェックしてみて。                
             </p>
-            <div class="anchor sp">
+            <div class="anchor_line-animation">
+                <span>
+                    <img src="<%= rootURL %>/assets/img/anchor_bg.png" alt="">
+                </span>
+                <span>
+                    <img src="<%= rootURL %>/assets/img/anchor_bg.png" alt="">
+                </span>
+                <span>
+                    <img src="<%= rootURL %>/assets/img/anchor_bg.png" alt="">
+                </span>
+            </div>
+            <div class="anchor active a sp">
                 <%- include('./_anchor.ejs') %>
             </div>
             <%- include('./_linetxt.ejs') %>
-            <main>
+            <main class="main">
                 <%- include('./_style1.ejs') %>
                 <%- include('./_style2.ejs') %>
                 <%- include('./_style3.ejs') %>
@@ -34,7 +46,7 @@
         </div>
     </div>
     <div class="pc-right pc-side">
-        <div class="right_inner">
+        <div class="right_inner anchor">
             <%- include('./_right.ejs') %>
         </div>
     </div>
@@ -49,7 +61,7 @@
 </div>
 <div class="sp-anchor">
     <div class="sp-anchor-inner">
-    
+        <%- include('./_sp-anchor.ejs') %>
     </div>
 </div>
 

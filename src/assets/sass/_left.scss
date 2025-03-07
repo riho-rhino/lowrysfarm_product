@@ -7,6 +7,12 @@
 .pc-left{
     position: relative;
     height: 100%;
+    &.move{
+        .left_logo,.left_sns{
+            opacity: 1;
+
+        }
+    }
 }
 
 .left-inner{
@@ -24,6 +30,8 @@
 
 
 .left_logo{
+    opacity: 0;
+    transition: opacity .5s 1.5s linear;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,6 +40,8 @@
 }
 
 .left_sns{
+    opacity: 0;
+    transition: opacity .5s 1.5s linear;
     position: fixed;
     bottom: 0;
     left: 0;
