@@ -82,6 +82,7 @@
         width: calc(323.32 / 450.46) * 100%;
         max-width: 323.32px;
         margin: 0 auto;
+        padding-top: 0;
     }
 
 }
@@ -211,6 +212,9 @@
     @include pc{
         font-size: min(calc(16.8 / c.$pcw * 100vw),16.8px);
     }
+    span{
+        font-weight: 100!important;
+    }
 
 }
 
@@ -239,7 +243,8 @@
    z-index: 1;
    
    @include pc{
-        width: calc(449.46 / 450.46) * 100%;
+        width: 100%;
+        margin-top: calc(140 / 450.46) * 100%; 
     }
 
     .mvbg-change1{

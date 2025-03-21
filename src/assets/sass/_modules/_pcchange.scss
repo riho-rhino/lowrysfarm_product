@@ -8,12 +8,6 @@
 }
 
 
-.wrapper:has(#style_1.on) .right_inner .anchor_list li:nth-child(1) .anchor_item img{
-    filter: grayscale(0%);
-}
-.wrapper:has(#style_1.on) .right_inner .anchor_list li:not(:nth-child(1)) .anchor_item img{
-    filter: grayscale(100%);
-}
 .wrapper:has(#style_1.on) .anchor_list .anchor_bg2{
     opacity: 0;
 }
@@ -24,12 +18,6 @@
     background: #fff;
 }
 
-.wrapper:has(#style_2.on) .right_inner .anchor_list li:nth-child(2) .anchor_item img{
-    filter: grayscale(0%);
-}
-.wrapper:has(#style_2.on) .right_inner .anchor_list li:not(:nth-child(2)) .anchor_item img{
-    filter: grayscale(100%);
-}
 .wrapper:has(#style_2.on) .anchor_list .anchor_bg2{
     opacity: 1;
 }
@@ -40,12 +28,6 @@
     background: c.$bg;
 }
 
-.wrapper:has(#style_3.on) .right_inner .anchor_list li:nth-child(3) .anchor_item img{
-    filter: grayscale(0%);
-}
-.wrapper:has(#style_3.on) .right_inner .anchor_list li:not(:nth-child(3)) .anchor_item img{
-    filter: grayscale(100%);
-}
 .wrapper:has(#style_3.on) .anchor_list .anchor_bg2{
     opacity: 0;
 }
@@ -56,12 +38,6 @@
     background: #fff;
 }
 
-.wrapper:has(#style_4.on) .right_inner .anchor_list li:nth-child(4) .anchor_item img{
-    filter: grayscale(0%);
-}
-.wrapper:has(#style_4.on) .right_inner .anchor_list li:not(:nth-child(4)) .anchor_item img{
-    filter: grayscale(100%);
-}
 .wrapper:has(#style_4.on) .anchor_list .anchor_bg2{
     opacity: 1;
 }
@@ -72,12 +48,6 @@
     background: c.$bg;
 }
 
-.wrapper:has(#style_5.on) .right_inner .anchor_list li:nth-child(5) .anchor_item img{
-    filter: grayscale(0%);
-}
-.wrapper:has(#style_5.on) .right_inner .anchor_list li:not(:nth-child(5)) .anchor_item img{
-    filter: grayscale(100%);
-}
 
 .wrapper:has(#style_5.on) .anchor_list .anchor_bg2{
     opacity: 0;
@@ -89,13 +59,6 @@
     background: #fff;
 }
 
-
-.wrapper:has(#style_6.on) .right_inner .anchor_list li:nth-child(6) .anchor_item img{
-    filter: grayscale(0%);
-}
-.wrapper:has(#style_6.on) .right_inner .anchor_list li:not(:nth-child(6)) .anchor_item img{
-    filter: grayscale(100%);
-}
 .wrapper:has(#style_6.on) .anchor_list .anchor_bg2{
     opacity: 1;
 }
@@ -107,12 +70,6 @@
 }
 
 
-.wrapper:has(#style_7.on) .right_inner .anchor_list li:nth-child(7) .anchor_item img{
-    filter: grayscale(0%);
-}
-.wrapper:has(#style_7.on) .right_inner .anchor_list li:not(:nth-child(7)) .anchor_item img{
-    filter: grayscale(100%);
-}
 .wrapper:has(#style_7.on) .anchor_list .anchor_bg2{
     opacity: 0;
 }

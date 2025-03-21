@@ -71,6 +71,7 @@
     font-size: calc(20 / c.$spw) * 100vw;
     
     @include pc{
+        margin-bottom: 5%;
         font-size: min(calc(20 / c.$pcw) * 100vw,20px);
     }
 }
@@ -100,11 +101,11 @@
     }
 
     &::before {
-        transform: rotate(55deg);
+        transform: rotate(70deg);
     }
 
     &::after {
-        transform: rotate(-55deg);
+        transform: rotate(-70deg);
     }
 }
 
@@ -291,21 +292,21 @@
 }
 
 .seven_link{
-    width: calc(142.77 / c.$spw) * 100%;
+    width: calc(142.77 / c.$spw) * 100%!important;
+    padding-top: calc(142.77 / c.$spw) * 100%;
     position: relative;
     height: 0;
-    padding-top: calc(142.77 / c.$spw) * 100%;
     border: solid 1px c.$main;
     border-radius: 50%;
     opacity: 0;
     transition: all .3s .7s linear;
     
     a{
-        width: calc(127 / 148.5) * 100%;
+        width: calc(127 / 142.77) * 100%;
+        padding-top: calc(127 / 142.77) * 100%;
         content: "";
         position: absolute;
         height: 0;
-        padding-top: calc(127 / 148.5) * 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -329,10 +330,11 @@
         }
     }
     @include pc{
-        width: calc(107.31 / 251) * 100%;
+        width: calc(107.31 / 251) * 100%!important;
         padding-top: calc(107.31 / 251) * 100%;
-        width: calc(95.46 / 107.31) * 100%;
         a{
+            padding-top: calc(95.46 / 107.31) * 100%;
+            width: calc(95.46 / 107.31) * 100%;
             .check{
                 width: calc(62 / 107.31) * 100%;   
             }

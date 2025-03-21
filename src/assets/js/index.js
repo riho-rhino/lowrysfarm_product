@@ -98,7 +98,7 @@ gsap.utils.toArray(".active").forEach((element) => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "top 60%",
+        start: "top 70%",
         toggleClass: {
           targets: element,
           className: "move",
@@ -114,7 +114,7 @@ gsap.utils.toArray(".active").forEach((element) => {
     gsap.to(element, {
       scrollTrigger: {
         trigger: element,
-        start: "top 70%",
+        start: "top 60%",
         toggleClass: {
           targets: element,
           className: "in",
@@ -124,17 +124,37 @@ gsap.utils.toArray(".active").forEach((element) => {
     });
   });
 
-  gsap.utils.toArray(".item_bg").forEach((element) => {
-  gsap.to(element, {
-    scale: 4,
+//   gsap.utils.toArray(".item_bg").forEach((element) => {
+//   gsap.to(element, {
+//     scale: 6,
+//     scrollTrigger: {
+//       trigger: ('.item_wrap'),
+//       start: "top 100%", 
+//       end: "bottom 40%", 
+//       scrub: 2, 
+//       markers:true,
+//     },
+//   });
+// });
+
+// // 各セクションごとに個別にアニメーションを設定
+document.querySelectorAll('.style').forEach(section => {
+  const itemBg = section.querySelector('.item_bg');
+  const itemPh = section.querySelector('.item_wrap');
+
+  gsap.to(itemBg, {
+    scale: 3.5,
     scrollTrigger: {
-      trigger: element,
-      start: "top 50%", 
-      end: "bottom 10%", 
-      scrub: 1, 
+      trigger: itemPh,          
+      start: "top 90%",         
+      end: "bottom 40%",        
+      scrub: true,               
     },
+    
   });
 });
+
+
 
   gsap.to(".lineup_btn", {
     scrollTrigger: {
@@ -147,3 +167,38 @@ gsap.utils.toArray(".active").forEach((element) => {
       },
     },
   });
+
+
+
+function load_init() {
+
+  // スクロールバー
+  function scrollbar() {
+    var $win = $(window);
+    var $body = $("body");
+    var $scrollbar = $(".js-scrollbar > .current");
+    var $scrollbarContainer = $(".js-scrollbar"); // スクロールバーの親要素
+
+    function updateScrollbar() {
+      var body_h = $body.outerHeight(true),
+        scroll_current_h = $scrollbar.outerHeight(),
+        win_h = $win.height(),
+        scroll_pos = $win.scrollTop(),
+        scrollbarContainer_h = $scrollbarContainer.outerHeight(); // スクロールバーの親要素の高さ
+
+      // スクロールバーの位置を計算
+      var scrollbar_top = (scroll_pos / (body_h - win_h)) * (scrollbarContainer_h - scroll_current_h);
+      $scrollbar.css("top", scrollbar_top + "px");
+    }
+
+    addEventListener('scroll', function () {
+      updateScrollbar();
+    }, { passive: true });
+  }
+
+  scrollbar();
+}
+$(window).on('load', function () {
+  load_init();
+});
+

@@ -18,11 +18,15 @@
 .left-inner{
     position: fixed;
     width: calc(450.46 / c.$pcw) * 100%;
+    
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     margin-left: calc(90 / c.$pcw) * 100%;
-    
+    @include pcw{
+        max-width: 500px;
+        margin-left: calc(150 / c.$pcw) * 100%;
+    }
 }
 
 

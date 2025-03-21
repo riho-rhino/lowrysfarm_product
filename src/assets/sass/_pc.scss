@@ -32,22 +32,34 @@
     }
     .right_inner{
         width: calc(251.61 / 384) * 100%;
+        max-width: 251.6px;
     }
 }
 
+.scrollbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: calc(587.5 / c.$pcw) * 100%;
+    margin-bottom: 100px;
+    width: 7px;
+    line-height: 0;
+}
 
 .l-fix__scrollbar {
     @include pc {
         content: "";
-        position: absolute;
+        position: fixed;
         z-index: 999;
         bottom: 0;
-        right: 0;
+        left: 0;
         height: 56px;
-        width: 2px;
+        width: 1px;
         transition: ease opacity 0.2s;
         background: c.$main;
-        opacity: 0;
+        // opacity: 0;
+        margin-left: calc(590 / c.$pcw) * 100%;
+        margin-bottom: 40px;
         
         
     }
@@ -66,7 +78,7 @@
             display: block;
             width: 7px;
             height: 7px;
-            background-color: none;
+            background-color: #fff;
             border: solid 1px c.$main;
             border-radius: 50%;
         }

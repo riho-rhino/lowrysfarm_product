@@ -95,7 +95,8 @@
       align-items: flex-end;
       justify-content: center;
       li{
-        width: calc(119.58 / c.$spw) * 100%;
+        // width: calc(119.58 / c.$spw) * 100%;
+        width: 29%;
         margin-bottom: calc(16 / c.$spw) * 100%;
       }
     }
